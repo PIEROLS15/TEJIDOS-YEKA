@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { data: "apellido" },
       { data: "correo" },
       { data: "perfil" },
+      { data: "accion" },
     ],
     language,
     dom,
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (this.readyState == 4 && this.status == 200) {
         console.log(this.responseText);
         const res = JSON.parse(this.responseText);
-        if (res.icono == 'success') {
+        if (res.icono == "success") {
           myModal.hide();
           tblUsuario.ajax.reload();
         }
@@ -50,3 +51,38 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   });
 });
+
+//Funcion para eliminar usuarios en el admin
+function eliminarUser(idUser) {
+  Swal.fire({
+    title: "Eliminar Usuario",
+    text: "¿Estas seguro de eliminar este usuario?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, eliminar!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const url = base_url + "usuarios/delete/" + idUser;
+      const http = new XMLHttpRequest();
+      http.open("GET", url, true);
+      http.send();
+      http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          console.log(this.responseText);
+          const res = JSON.parse(this.responseText);
+          if (res.icono == "success") {
+            tblUsuario.ajax.reload();
+          }
+          Swal.fire("Aviso", res.msg.toUpperCase(), res.icono);
+        }
+      };
+      Swal.fire({
+        title: "Usuario Eliminado!",
+        text: "El usuario se elimino correctamente",
+        icon: "success",
+      });
+    }
+  });
+}

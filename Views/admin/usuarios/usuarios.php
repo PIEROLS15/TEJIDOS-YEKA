@@ -20,6 +20,7 @@
                                     <th>Apellido</th>
                                     <th>Correo</th>
                                     <th>Perfil</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,11 +55,11 @@
                     </div>
                     <div class="form-group mb-2">
                         <label for="correo">Correo</label>
-                        <input id="correo" class="form-control" type="email" name="correo" placeholder="Correo Electrónico"> 
+                        <input id="correo" class="form-control" type="email" name="correo" placeholder="Correo Electrónico">
                     </div>
                     <div class="form-group mb-2">
                         <label for="clave">Contraseña</label>
-                        <input id="clave" class="form-control" type="password" name="clave" placeholder="Contraseña"> 
+                        <input id="clave" class="form-control" type="password" name="clave" placeholder="Contraseña">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -73,12 +74,7 @@
 
 <?php footerAdmin($data); ?>
 
-
-<script src="<?php echo BASE_URL;?>assets/js/modulos/usuarios.js"></script>
-<script>
-const base_url = '<?php echo BASE_URL; ?>';
-</script>
-<script src="<?php echo BASE_URL;?>assets/js/sweetalert2.all.min.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/modulos/usuarios.js"></script>
 
 </body>
 
