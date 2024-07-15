@@ -12,14 +12,12 @@
             <div class="card shadow-lg">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-hover text-center align-middle" id="tblUsuarios">
+                        <table class="table table-bordered table-striped table-hover text-center align-middle" id="tblCategorias">
                             <thead class="table-dark">
                                 <tr>
                                     <th>#</th>
                                     <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Correo</th>
-                                    <th>Perfil</th>
+                                    <th>Imagen</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -46,21 +44,14 @@
             <form id="frmRegistro">
                 <div class="modal-body">
                     <input type="hidden" id="id" name="id">
+                    <input type="hidden" id="imagen_actual" name="imagen_actual">
                     <div class="form-group mb-2">
-                        <label for="nombre">Nombre</label>
-                        <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombres">
+                        <label for="categoria">Nombre</label>
+                        <input id="categoria" class="form-control" type="text" name="categoria" placeholder="Categorias">
                     </div>
-                    <div class="form-group mb-2">
-                        <label for="apellido">Apellidos</label>
-                        <input id="apellido" class="form-control" type="text" name="apellido" placeholder="Apellidos">
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="correo">Correo</label>
-                        <input id="correo" class="form-control" type="email" name="correo" placeholder="Correo Electrónico">
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="clave">Contraseña</label>
-                        <input id="clave" class="form-control" type="password" name="clave" placeholder="Contraseña">
+                    <div class="form-group">
+                      <label for="imagen">Imagen (opcional)</label>
+                      <input type="file" class="form-control-file" name="imagen" id="imagen" placeholder="" aria-describedby="fileHelpId">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -75,7 +66,7 @@
 
 <?php footerAdmin($data); ?>
 
-<script src="<?php echo BASE_URL; ?>assets/js/modulos/usuarios.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/modulos/categorias.js"></script>
 
 </body>
 

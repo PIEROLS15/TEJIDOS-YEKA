@@ -58,10 +58,14 @@
 
                         <div class="sb-sidenav-menu-heading">Interface</div>
 
-                        <a class="nav-link collapsed" href="<?php echo BASE_URL . 'usuarios'; ?>">
+                        <a class="nav-link" href="<?php echo BASE_URL . 'usuarios'; ?>">
                             <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                             Usuarios
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <a class="nav-link" href="<?php echo BASE_URL . 'categorias'; ?>">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
+                            Categorias
                         </a>
 
 
