@@ -1,5 +1,7 @@
 const nuevo = document.querySelector("#nuevo_registro");
 const frm = document.querySelector("#frmRegistro");
+const titleModal = document.querySelector("#titleModal");
+const btnAccion = document.querySelector("#btnAccion");
 let tblUsuario;
 
 // Ver Modal Nuevo usuario
@@ -27,6 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Modal para registrar nuevos usuarios
   nuevo.addEventListener("click", function () {
+    document.querySelector('#id').value = '';
+    titleModal.textContent = 'NUEVO USUARIO';
+    frm.reset();
+    document.querySelector('#clave').removeAttribute('readonly');
     myModal.show();
   });
 
@@ -85,4 +91,26 @@ function eliminarUser(idUser) {
       });
     }
   });
+}
+
+//Funcion para editar usuarios en el admin
+function editUser(idUser) {
+  const url = base_url + "usuarios/edit/" + idUser;
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+      const res = JSON.parse(this.responseText);
+      document.querySelector('#id').value = res.id;
+      document.querySelector('#nombre').value = res.nombre;
+      document.querySelector('#apellido').value = res.apellido;
+      document.querySelector('#correo').value = res.correo;
+      document.querySelector('#clave').setAttribute('readonly', 'readonly');
+      btnAccion.textContent = 'Actualizar';
+      titleModal.textContent = 'MODIFICAR USUARIO';
+      myModal.show();
+    }
+  };
 }

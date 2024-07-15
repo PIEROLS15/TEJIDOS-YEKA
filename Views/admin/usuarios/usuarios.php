@@ -39,12 +39,13 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="titleModal">Nuevo Usuario</h5>
+                <h5 class="modal-title" id="titleModal"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 </button>
             </div>
             <form id="frmRegistro">
                 <div class="modal-body">
+                    <input type="hidden" id="id" name="id">
                     <div class="form-group mb-2">
                         <label for="nombre">Nombre</label>
                         <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombres">
@@ -63,7 +64,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="submit" class="btn btn-primary" id="btnAccion">Registrar</button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 </div>
             </form>
