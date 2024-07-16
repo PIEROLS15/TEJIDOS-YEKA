@@ -120,7 +120,7 @@ include_once 'views/template/header.php';
             </div>
             <div class="row">
                 <?php foreach ($data['nuevoProductos'] as $producto) { ?>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-12 col-md-3 mb-4">
                     <div class="card h-100">
                         <a href="<?php echo BASE_URL . 'principal/detail/'. $producto['id']; ?>">
                             <img src="<?php echo $producto['imagen']; ?>" class="card-img-top" alt="<?php echo $producto['nombre']; ?>">

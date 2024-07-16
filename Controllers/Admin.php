@@ -23,6 +23,7 @@ class Admin extends Controller
                 }else{
                     if (password_verify($_POST['clave'], $data['clave'])) {
                         $_SESSION['email'] = $data['correo'];
+                        $_SESSION['nombre_usuario'] = $data['nombre'];
                         $respuesta = array('msg' => 'Datos correctos', 'icono' => 'success');
                     }else{
                         $respuesta = array('msg' => 'Contraseña incorrecta', 'icono' => 'warning');
@@ -40,5 +41,11 @@ class Admin extends Controller
     {
         $data['title'] = 'Panel Administrativo';
         $this->views->getView('admin/administracion', "index", $data);
+    }
+
+    public function salir()
+    {
+        session_destroy();
+        header('Location:' . BASE_URL);
     }
 }

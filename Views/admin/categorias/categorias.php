@@ -12,7 +12,7 @@
             <div class="card shadow-lg">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-hover text-center align-middle" id="tblCategorias">
+                        <table class="table table-bordered table-striped table-hover text-center align-middle" id="tblCategorias" style="width:100%;">
                             <thead class="table-dark">
                                 <tr>
                                     <th>#</th>

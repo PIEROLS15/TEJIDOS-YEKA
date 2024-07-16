@@ -6,13 +6,13 @@
         <li class="breadcrumb-item active"><?php echo $data['title'] ?></li>
     </ol>
     <button class="btn btn-primary mb-2" type="button" id="nuevo_registro"><i class="fas fa-plus-circle"></i> Registrar</button>
-    <br>
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow-lg">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-hover text-center align-middle" id="tblUsuarios">
+                        <table class="table table-bordered table-striped table-hover text-center align-middle"
+                            id="tblUsuarios" style="width:100%;">
                             <thead class="table-dark">
                                 <tr>
                                     <th>#</th>
@@ -33,6 +33,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="nuevoModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -56,7 +57,8 @@
                     </div>
                     <div class="form-group mb-2">
                         <label for="correo">Correo</label>
-                        <input id="correo" class="form-control" type="email" name="correo" placeholder="Correo Electrónico">
+                        <input id="correo" class="form-control" type="email" name="correo"
+                            placeholder="Correo Electrónico">
                     </div>
                     <div class="form-group mb-2">
                         <label for="clave">Contraseña</label>
