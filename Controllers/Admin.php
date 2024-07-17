@@ -7,6 +7,10 @@ class Admin extends Controller
     }
     public function index()
     {
+        if (!empty($_SESSION['nombre_usuario'])) {
+            header('Location: ' . BASE_URL . 'admin/home');
+            exit;
+        }
         $data['title'] = 'Acceso al admin';
         $this->views->getView('admin', "login", $data);
     }
@@ -39,6 +43,10 @@ class Admin extends Controller
 
     public function home()
     {
+        if (empty($_SESSION['nombre_usuario'])) {
+            header('Location: ' . BASE_URL . 'admin');
+            exit;
+        }
         $data['title'] = 'Dashboard'. ' - ' . TITLE;
         $data['titulo'] = 'Dashboard';
         $data['pendientes'] = $this->model->getTotales(1);
@@ -50,6 +58,10 @@ class Admin extends Controller
 
     public function productosMinimos()
     {
+        if (empty($_SESSION['nombre_usuario'])) {
+            header('Location: ' . BASE_URL . 'admin');
+            exit;
+        }
         $data = $this->model->productosMinimos();
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
@@ -57,6 +69,10 @@ class Admin extends Controller
 
     public function topProductos()
     {
+        if (empty($_SESSION['nombre_usuario'])) {
+            header('Location: ' . BASE_URL . 'admin');
+            exit;
+        }
         $data = $this->model->topProductos();
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();

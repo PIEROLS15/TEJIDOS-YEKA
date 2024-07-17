@@ -31,7 +31,7 @@ function getListaDeseo() {
           html += `<tr>
                     <td>
                     <a href="${base_url}principal/detail/${producto.id}">
-                    <img class="img-thumbnail rounded-circle" src="${
+                    <img class="img-thumbnail rounded-circle" src="${base_url+
                       producto.imagen
                     }" alt="" width="80">
                     </a>

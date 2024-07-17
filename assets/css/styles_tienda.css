@@ -1,0 +1,52 @@
+body {
+    padding-top: 83px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* Para recortar las imagenes dentro del card en la tienda */
+.card-img-container {
+    width: 100%;
+    height: 0;
+    padding-top: 100%; 
+    position: relative;
+}
+
+.card-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Color para el navbar */
+.custom-nav {
+    background-color: #853a4d; 
+}
+
+.text-custom{
+    color: #853a4d; 
+}
+
+.btn.custom-nav {
+    /* Estilos básicos para el botón */
+    background-color: #853a4d; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.btn.custom-nav:hover {
+    /* Estilos cuando se hace hover */
+    background-color: #ce6f86; /* Nuevo color de fondo */
+    color: white; /* Nuevo color del texto */
+}
+
+/* Estilos para las imagenes categorias en principal */
+.categoria-imagen {
+    width: 220px; 
+    height: 220px;
+    object-fit: cover; 
+}
+
+

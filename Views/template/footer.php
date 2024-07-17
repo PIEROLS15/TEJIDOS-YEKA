@@ -2,7 +2,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
+            <div class="modal-header custom-nav text-white">
                 <h5 class="modal-title"><i class="fas fa-cart-arrow-down"></i> Mi Carrito</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -28,9 +28,9 @@
             <div class="d-flex justify-content-around mb-3">
                 <h3 id="totalGeneral"></h3>
                 <?php if (!empty($_SESSION['correoCliente'])) { ?>
-                <a class="btn btn-outline-success" href="<?php echo BASE_URL . 'Clientes'; ?>">Procesar pago</a>
+                <a class="btn custom-nav" href="<?php echo BASE_URL . 'Clientes'; ?>">Procesar pago</a>
                 <?php }else{?>
-                <a class="btn btn-outline-success" href="#" onclick="abrirModalLogin();">Login</a>
+                <a class="btn custom-nav" href="#" onclick="abrirModalLogin();">Login</a>
                 <?php } ?>
 
             </div>
@@ -43,7 +43,7 @@
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
+            <div class="modal-header custom-nav text-white">
                 <h5 class="modal-title" id="titleLogin"> Inicia Sesión</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -56,40 +56,40 @@
                     <div class="row">
                         <div class="col-md-12" id="frmLogin">
                             <div class="form-group mb-3">
-                                <label for="correoLogin"><i class="fas fa-envelope"></i> Correo</label>
+                                <label for="correoLogin" class="text-custom"><i class="fas fa-envelope"></i> Correo</label>
                                 <input type="text" name="correoLogin" id="correoLogin" class="form-control"
                                     placeholder="Correo Electrónico">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="claveLogin"><i class="fas fa-key"></i> Contraseña</label>
+                                <label for="claveLogin" class="text-custom"><i class="fas fa-key"></i> Contraseña</label>
                                 <input type="text" name="claveLogin" id="claveLogin" class="form-control"
                                     placeholder="Contraseña">
                             </div>
-                            <a href="#" id="btnRegister">Todavia no tienes una cuenta?</a>
+                            <a href="#" id="btnRegister" class="text-custom">Todavia no tienes una cuenta?</a>
                             <div class="float-end">
-                                <button type="button" class="btn btn-primary btn-lg" id="login">Login</button>
+                                <button type="button" class="btn custom-nav btn-lg text-white" id="login">Login</button>
                             </div>
                         </div>
                         <!-- formulario de registro -->
                         <div class="col-md-12 d-none" id="frmRegister">
                             <div class="form-group mb-3">
-                                <label for="nombreRegistro"><i class="fas fa-list"></i> Nombre</label>
+                                <label for="nombreRegistro" class="text-custom"><i class="fas fa-list"></i> Nombres</label>
                                 <input type="text" name="nombreRegistro" id="nombreRegistro" class="form-control"
-                                    placeholder="Nombre Completo">
+                                    placeholder="Nombres Completo">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="correoRegistro"><i class="fas fa-envelope"></i> Correo</label>
+                                <label for="correoRegistro" class="text-custom"><i class="fas fa-envelope"></i> Correo</label>
                                 <input type="text" name="correoRegistro" id="correoRegistro" class="form-control"
-                                    placeholder="Contraseña">
+                                    placeholder="Correo Electrónico">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="claveRegistro"><i class="fas fa-key"></i> Contraseña</label>
+                                <label for="claveRegistro" class="text-custom"><i class="fas fa-key"></i> Contraseña</label>
                                 <input type="text" name="claveRegistro" id="claveRegistro" class="form-control"
                                     placeholder="Contraseña">
                             </div>
-                            <a href="#" id="btnLogin">Ya tienes una cuenta</a>
+                            <a href="#" id="btnLogin" class="text-custom">Ya tienes una cuenta</a>
                             <div class="float-end">
-                                <button type="button" class="btn btn-primary btn-lg"
+                                <button type="button" class="btn custom-nav  btn-lg"
                                     id="registrarse">Registrarse</button>
                             </div>
                         </div>
@@ -106,12 +106,14 @@
 
 
 <!-- Start Footer -->
-<footer class="bg-dark" id="tempaltemo_footer">
+<footer class="custom-nav" id="tempaltemo_footer">
     <div class="container">
         <div class="row">
 
             <div class="col-md-4 pt-5">
-                <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                <a class="navbar-brand text-white border-bottom logo h1 align-self-center" href="<?php echo BASE_URL;?>">
+                    <?php echo TITLE; ?>
+                </a>
                 <ul class="list-unstyled text-light footer-link-list">
                     <li>
                         <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -184,19 +186,6 @@
                     <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
                         placeholder="Email address">
                     <div class="input-group-text btn-success text-light">Subscribe</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="w-100 bg-black py-3">
-        <div class="container">
-            <div class="row pt-2">
-                <div class="col-12">
-                    <p class="text-left text-light">
-                        Copyright &copy; 2021 Company Name
-                        | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
-                    </p>
                 </div>
             </div>
         </div>

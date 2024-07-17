@@ -12,11 +12,7 @@ include_once 'views/template/header.php';
         </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link" id="pendientes-tab" data-bs-toggle="tab" data-bs-target="#pendientes-tab-pane"
-                type="button" role="tab" aria-controls="pendientes-tab-pane" aria-selected="false">Pendientes</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="completados-tab" data-bs-toggle="tab" data-bs-target="#completados-tab-pane"
-                type="button" role="tab" aria-controls="completados-tab-pane" aria-selected="false">Completados</button>
+                type="button" role="tab" aria-controls="pendientes-tab-pane" aria-selected="false">Pedidos</button>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -175,21 +171,21 @@ include_once 'views/template/header.php';
                 <div class="row">
 
                     <div class="col-md-6 col-lg-4 pb-5">
-                        <div class="h-100 py-5 services-icon-wap shadow">
+                        <div class="h-100 py-5 services-icon-wap shadow" id="estadoEnviado">
                             <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
-                            <h2 class="h5 mt-4 text-center">Enviado</h2>
+                            <h2 class="h5 mt-4 text-center">Pendiente</h2>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4 pb-5">
-                        <div class="h-100 py-5 services-icon-wap shadow">
+                        <div class="h-100 py-5 services-icon-wap shadow" id="estadoProceso"> 
                             <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
                             <h2 class="h5 mt-4 text-center">Proceso</h2>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4 pb-5">
-                        <div class="h-100 py-5 services-icon-wap shadow">
+                        <div class="h-100 py-5 services-icon-wap shadow" id="estadoCompletado">
                             <div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
                             <h2 class="h5 mt-4 text-center">Completado</h2>
                         </div>

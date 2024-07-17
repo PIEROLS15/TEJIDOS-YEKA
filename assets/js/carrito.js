@@ -137,7 +137,7 @@ function getListaCarrito() {
         html += `<tr>
                   <td>
                   <a href="${base_url}principal/detail/${producto.id}">
-                  <img class="img-thumbnail rounded-circle" src="${
+                  <img class="img-thumbnail rounded-circle" src="${base_url+
                     producto.imagen
                   }" alt="" width="80">
                   </a>
@@ -151,11 +151,10 @@ function getListaCarrito() {
                   <td><button class="btn btn-danger btnDeletecart" type="button" prod="${
                     producto.id
                   }"><i class="fas fa-trash"></i></button>
-                  <button class="btn btn-success" type="button"><i class="fas fa-cart-plus"></i></button></td>
                 </tr>`;
       });
       tableListaCarrito.innerHTML = html;
-      document.querySelector("#totalGeneral").textContent = res.total;
+      document.querySelector("#totalGeneral").textContent = "Total: " + res.total;
       btnEliminarCarrito();
     }
   };

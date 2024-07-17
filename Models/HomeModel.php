@@ -14,7 +14,7 @@ class HomeModel extends Query{
 
     public function getNuevoProductos()
     {
-        $sql = "SELECT * FROM productos ORDER BY id DESC LIMIT 12";
+        $sql = "SELECT * FROM productos WHERE estado = 1 ORDER BY id DESC LIMIT 4";
         return $this->selectAll($sql);
     }
 
