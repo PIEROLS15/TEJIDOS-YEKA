@@ -4,4 +4,16 @@
 
 }
 
-
+/* Degradado para los iconos del card de admin */
+.bg-gradient-info {
+    background: linear-gradient(45deg, #00c6ff, #287ce2);
+}
+.bg-gradient-warning {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+}
+.bg-gradient-danger {
+    background: linear-gradient(45deg, #e74a5a, #bd2130);
+}
+.bg-gradient-success {
+    background: linear-gradient(45deg, #198754, #0f5132);
+}

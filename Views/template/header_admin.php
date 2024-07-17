@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="<?php echo BASE_URL . 'assets/css/styles.css'; ?>">
     <link rel="stylesheet" href="<?php echo BASE_URL . 'assets/css/styles_admin.css'; ?>">
     <script src="<?php echo BASE_URL . 'assets/js/all.js'; ?>"></script>
+    <script src="<?php echo BASE_URL . 'assets/js/chart.js'; ?>"></script>
+    
 </head>
 
 <body class="sb-nav-fixed">
