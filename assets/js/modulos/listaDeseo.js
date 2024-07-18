@@ -19,7 +19,7 @@ function getListaDeseo() {
               <div class="empty-cart-content">
               <br>
               <br>
-                <i class="fas fa-heart-broken" style="font-size: 80px; color: red;"></i>
+                <i class="fas fa-heart-broken" style="font-size: 80px; color: #853a4d;"></i>
                 <br>
                 <br>
                 <p>Tu lista de deseo esta vacía.</p>

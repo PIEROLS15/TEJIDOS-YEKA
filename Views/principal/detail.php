@@ -127,10 +127,10 @@ include_once 'views/template/header.php';
             </div>
             <!-- col end -->
             <div class="col-lg-7 mt-5">
-                <div class="card">
+                <div class="card shadow-sm">
                     <div class="card-body">
                         <h1 class="h2"><?php echo $data['producto']['nombre']; ?></h1>
-                        <p class="h3 py-2"><?php echo MONEDA . ' '. $data['producto']['precio']; ?></p>
+                        <p class="h3 text-custom"><b><?php echo MONEDA . ' '. $data['producto']['precio']; ?></b></p>
                         <ul class="list-inline">
                             <li class="list-inline-item">
                                 <h6>Categoria</h6>
@@ -142,14 +142,6 @@ include_once 'views/template/header.php';
 
                         <h6>Descripción:</h6>
                         <p><?php echo $data['producto']['descripcion']; ?></p>
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <h6>Colores disponibles :</h6>
-                            </li>
-                            <li class="list-inline-item">
-                                <p class="text-muted"><strong>White / Black</strong></p>
-                            </li>
-                        </ul>
 
                         <form action="" method="GET">
                             <input type="hidden" id="idProducto" value="<?php echo $data['producto']['id']; ?>">
@@ -159,27 +151,18 @@ include_once 'views/template/header.php';
                                         Cantidad
                                         <input type="hidden" id="product-quanity" value="1">
                                     </li>
-                                    <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span>
+                                    <li class="list-inline-item"><span class="btn custom-nav" id="btn-minus">-</span>
                                     </li>
                                     <li class="list-inline-item"><span class="badge bg-secondary"
                                             id="var-value">1</span></li>
-                                    <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span>
+                                    <li class="list-inline-item"><span class="btn custom-nav" id="btn-plus">+</span>
                                     </li>
+                                    <button type="button" class="btn custom-nav mt-2 btn-lg rounded-pill"
+                                        id="btnAddCart">Añadir al carrito</button>
                                 </ul>
                             </div>
+                        </form>
                     </div>
-                    <div class="row pb-3">
-                        <div class="col d-grid">
-                            <button type="submit" class="btn btn-success btn-lg" name="submit"
-                                value="buy">Comprar</button>
-                        </div>
-                        <div class="col d-grid">
-                            <button type="button" class="btn btn-success btn-lg" id="btnAddCart">Añadir al
-                                carrito</button>
-                        </div>
-                    </div>
-                    </form>
-
                 </div>
             </div>
         </div>
@@ -209,12 +192,12 @@ include_once 'views/template/header.php';
                         <div
                             class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                             <ul class="list-unstyled">
-                                <li><a class="btn btn-success text-white btnAddDeseo" href="#"
+                                <li><a class="btn custom-nav text-white btnAddDeseo" href="#"
                                         prod="<?php echo $relacion['id']; ?>"><i class="fas fa-heart"></i></a></li>
-                                <li><a class="btn btn-success text-white mt-2"
+                                <li><a class="btn custom-nav text-white mt-2"
                                         href="<?php echo BASE_URL . 'principal/detail/' . $relacion['id']?>"><i
                                             class="far fa-eye"></i></a></li>
-                                <li><a class="btn btn-success text-white mt-2 btnAddcarrito" href="#"
+                                <li><a class="btn custom-nav text-white mt-2 btnAddcarrito" href="#"
                                         prod="<?php echo $relacion['id']; ?>"><i class="fas fa-cart-plus"></i></a></li>
                             </ul>
                         </div>

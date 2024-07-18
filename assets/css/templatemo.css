@@ -64,7 +64,7 @@ body, ul, li, p, a, label, input, div {
 }
 .pagination .page-link:hover {color: #000;}
 .pagination .page-link:hover, .pagination .page-link.active {
-  background-color: #69bb7e;
+  background-color: #853a4d;
   color: #fff;
 }
 /* Nav */
@@ -131,10 +131,10 @@ body, ul, li, p, a, label, input, div {
   color: #853a4d !important;
 }
 /* Services */
-.services-icon-wap {transition: .3s; background: #69bb7e; color: #fff;}
+.services-icon-wap {transition: .3s; background: #853a4d; color: #fff;}
 .services-icon-wap i {color: #fff;}
 .services-icon-wap:hover, .services-icon-wap:hover i {color: #fff;}
-.services-icon-wap:hover {background: #69bb7e;}
+.services-icon-wap:hover {background: #853a4d;}
 /* Contact map */
 .leaflet-control a, .leaflet-control { font-size: 10px !important;}
 .form-control { border: 1px solid #e8e8e8;}

@@ -4,14 +4,12 @@ include_once 'views/template/header.php';
 <!-- Start Content -->
 <div class="container py-5">
     <div class="row">
-
         <div class="col-lg-12">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12 text-center">
                     <ul class="list-inline shop-top-menu pb-3 pt-1">
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none mr-3"
-                                href="<?php echo BASE_URL;?>">Productos</a>
+                            <h1 class="h1 text-custom"><b>Productos</b></h1>
                         </li>
                     </ul>
                 </div>
@@ -28,12 +26,12 @@ include_once 'views/template/header.php';
                             <div
                                 class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                 <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white btnAddDeseo" href="#"
+                                    <li><a class="btn custom-nav text-white btnAddDeseo" href="#"
                                             prod="<?php echo $producto['id']; ?>"><i class="fas fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2"
+                                    <li><a class="btn custom-nav text-white mt-2"
                                             href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']?>"><i
                                                 class="fas fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2 btnAddcarrito" href="#"
+                                    <li><a class="btn custom-nav text-white mt-2 btnAddcarrito" href="#"
                                             prod="<?php echo $producto['id']; ?>"><i class="fas fa-cart-plus"></i></a>
                                     </li>
                                 </ul>
